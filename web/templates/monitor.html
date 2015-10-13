@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+<html>
+<body>
+{% block page-content %}
+<ul> 
+<span style="color:#993300;">
+<li><a><img src="/static/monitor/192.168.0.232_CpuUsage_now-1h.png" alt="Disk"></a></li>
+<li><a><img src="/static/monitor/192.168.0.232_CpuUsage_now-1d.png" alt="Disk"></a></li>
+{% for img in get_images %}
+	<li><a><img src="/static/monitor/{{ img }} " alt="Disk"></a></li>
+{% endfor%}
+</ul> 
+</body>
+</html>
+{% endblock %}
